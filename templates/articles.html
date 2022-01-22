@@ -8,12 +8,15 @@
             {% for article in articles %}
             <li class="list-group-item">
 
-                <a href="article/{{article.id}}"><h2 style="font-size: 20px;">{{article.title}}</h2></a>
+                <a href="article/{{article.id}}"><h2 style="font-size: 20px; margin: 10px;padding: 10px;;">{{article.title}}</h2></a>
                 
-                <p>{{article.body}}</p>
+                <p style="background-color: beige; margin:10px; padding: 50px;;">{{article.body}}</p>
                 <br>
-                <p>Author : <b>{{article.author}}</b></p>
-                 <span>{{article.date}}</span>   
+                <div style="margin: 5px;padding: 5px;;">  
+                    <p>Author : <b>{{article.author}}</b></p>
+                    <span>{{article.date}}</span>
+                </div>
+                 
             </li>
             <br>
             <!-- <li class="list-group-item">{{article.body}}</li> -->
