@@ -1,6 +1,9 @@
 from operator import truth
 from flask import Flask,render_template
 from data import Articles
+import re
+import os
+from importlib import reload
 
 app = Flask(__name__)
 
@@ -23,5 +26,11 @@ def articles():
 def article(id):
     return render_template('article.html', id =id)                
 
+
+def get_port():
+      return int(os.environ.get("PORT", 33507))
+
+def create_app():
+    app = Flask(__name__)
 if __name__ =='__main__':
-    app.run(debug=truth)
+    app.run(debug=True,host='0.0.0.0',port=get_port())
