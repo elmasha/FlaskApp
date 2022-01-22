@@ -7,8 +7,14 @@
         <ul class="list-group">
             {% for article in articles %}
             <li class="list-group-item">
-                <h2>{{article.title}}</h2>
-                <a href="article/{{article.id}}">{{article.body}}</a></li>
+
+                <a href="article/{{article.id}}"><h2 style="font-size: 20px;">{{article.title}}</h2></a>
+                
+                <p>{{article.body}}</p>
+                <br>
+                <p>Author : <b>{{article.author}}</b></p>
+                 <span>{{article.date}}</span>   
+            </li>
             <br>
             <!-- <li class="list-group-item">{{article.body}}</li> -->
             {% endfor %}
