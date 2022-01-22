@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT main:create_apps
+web: waitress-serve --port=$PORT app.py:create_apps
