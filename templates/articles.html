@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div style="margin: 20px;" class="jumbotron">
+        <h1>News</h1>
+        .
+        <ul class="list-group">
+            {% for article in articles %}
+            <li class="list-group-item">
+                <h2>{{article.title}}</h2>
+                <a href="article/{{article.id}}">{{article.body}}</a></li>
+            <br>
+            <!-- <li class="list-group-item">{{article.body}}</li> -->
+            {% endfor %}
+            
+           
+        </ul>
+        
+       
+    </div>
+{% endblock %}
