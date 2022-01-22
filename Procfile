@@ -1,1 +1,1 @@
-web: waitress-serve --listen=*:5000 py:wsgifunc
+web: waitress-serve --port=$PORT website:app
