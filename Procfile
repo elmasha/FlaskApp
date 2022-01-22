@@ -1,1 +1,1 @@
-web: python app.py runserver 0.0.0.0:5000
+web: waitress-serve --listen=*:5000 py:wsgifunc
